@@ -35,15 +35,23 @@
 }
 .tip-calc {
     background-color: white;
-    width: 70vw;
-    height: 60vh;
+    width: 60vw;
+    height: auto;
     text-align: center; 
-    border-radius: 30px;
+    border-radius: 20px;
     display: flex;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
     
     
 }
-.bill-tit{
+.bill{
+    background-color: #fff;
+}
+.tip-percent{
+    background-color: #fff;
+}
+.tit{
     background-color: #fff;
     font-family: 'Space Mono', monospace;
     font-weight: bold;
@@ -53,20 +61,23 @@
 .form-splitter{
     background-color: #fff;
 
-    width: 50%;
+    width: 80vw;
     text-align: left;
-    height: 52vh;
-    margin-top: 2vw;
+    height: 60vh;
+    margin-top: 1vw;
     margin-left: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     
 }
 .result{    
     display: grid;
-    width: 50vw;
+    width: 90vw;
     text-align: left;
     margin: 1.75vw;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 15vh;
+    grid-template-columns: 24vh 0;
+    grid-template-rows: 7vw 12vw;
     
   
     border-radius: 10px;
@@ -75,7 +86,7 @@
 .result p{
     
     font-family: 'Space Mono', monospace;
-    font-size: 1rem;
+    font-size: 0.7rem;
     font-weight: 400;
     background-color: hsl(183.2,100%,14.71%);
     margin: 25px;
@@ -83,42 +94,169 @@
 }
 .result-items span{
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 0.8rem;
     background-color: transparent;
 }
 .result-items:nth-child(2){
     font-weight: 700;
     color: hsl(172, 67%, 45%);
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 .result-items:nth-child(4){
     font-weight: 700;
     color: hsl(172, 67%, 45%);
-    font-size: 3rem;
-}
-
-@media only screen and (max-width: 768px){
-    .tip-calc{
-        width: 120vh;
-        align-items: center;
-        flex-direction: column;
-    }
-    .result{
-        width: 80vw;
-    }
-    
+    font-size: 2.5rem;
 }
 .money{
     background-color: rgb(225, 229, 231);
     border: none;
-    width: 24vw;
-    height: 5vh;
+    width: 25vw;
+    height: 6vh;
     outline: none;    
     margin-top: 3px;
     margin-left: 3px;
     border-radius: 5px;
+    text-align: right;
+    padding: 10px;
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: hsl(183, 100%, 15%);
 }
 .money:focus{
     border: 3px hsl(172, 67%, 45%) solid;
 
 }
+
+.dollar-sign{
+    position: absolute;
+    margin: 12px;
+    margin-left: 20px;
+    background-color: rgb(225, 229, 231);
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.tips{
+    display: grid;
+    grid-template-columns: 16.33vh 16.33vh 16.33vh;
+    gap: 1.2vw;
+    background-color: #fff;
+    width: 25vw;
+}
+.tips-item{
+    padding: 10px;
+    background-color: hsl(183.2,100%,14.71%);
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 6px;
+    color: #fff;
+    transition: all .2s;
+    width: auto;
+}
+.tips-item:last-child{
+    background-color: rgb(225, 229, 231);
+    color: hsl(183, 100%, 15%);
+    outline: none;
+    border: none;
+    
+}
+.tips-item:last-child:focus{
+    border: 3px hsl(172, 67%, 45%) solid;
+    padding: 7px;
+}
+input[type="radio"]:checked + label{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183.2,100%,14.71%);
+}
+.number-persons{
+    background-color: #fff;
+}
+
+.button-reset{
+    margin-left: 2vw;
+    grid-column: 1 / 2;
+    width: 54vh;
+    height: 8vh;
+    border: none;
+    font-family: 'Space Mono', monospace;
+    font-weight: bold;
+    font-size: 1.4rem;
+    background-color: hsl(172, 67%, 45%);
+    color:hsl(183, 100%, 15%);
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+.authors{
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    color: hsl(186, 14%, 43%);
+}
+a:link{
+    text-decoration: none;
+    font-weight: bold;
+}
+a:visited{
+    color: #000;
+}
+.error{
+    background-color: #fff;
+    color: red;
+    visibility: hidden;
+}
+@media only screen and (max-width: 700px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .tip-calc{
+        width: 100vw;
+        align-items: center;
+        flex-direction: column;
+    }
+    .result{
+        width: 85vw;
+        grid-template-rows: 8vh;
+        grid-template-columns: 40vw 20vw;
+    }
+    .result p {
+        font-size: 0.7rem;
+    }
+    .result-items span{
+        font-size: 0.8rem;
+    }
+    .result-items:nth-child(2){
+        
+        font-size: 2rem;
+    }
+    .result-items:nth-child(4){
+        
+        font-size: 2rem;
+    }
+    .bill-tit{
+        font-size: 1.2rem;
+    }
+    .money{
+        width: 85vw;
+        height: 4.5vh;
+    }
+    .form-splitter{
+        width: 85vw;
+    }
+    .tips{
+        width: 85vw;
+        gap: 3vw;
+        grid-template-columns: 41vw 41vw;
+    }
+    .button-reset{
+        width: 80vw;
+        height: 7vh;
+    }
+}
+
+
