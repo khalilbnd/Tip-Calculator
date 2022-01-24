@@ -209,12 +209,61 @@ a:visited{
     color: red;
     visibility: hidden;
 }
+
+@media only screen and (min-width: 1400px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .tip-calc{
+        align-items: center;
+        height: 50vh;
+    }
+    .result{
+        width: 85vw;
+    }
+    .result p {
+        font-size: 0.7rem;
+    }
+    .result-items span{
+        font-size: 0.8rem;
+    }
+    .result-items:nth-child(2){
+        
+        font-size: 2rem;
+    }
+    .result-items:nth-child(4){
+        
+        font-size: 2rem;
+    }
+    .bill-tit{
+        font-size: 1.2rem;
+    }
+    .money{
+        height: 4.5vh;
+    }
+    .form-splitter{
+        height: 40vh;
+        justify-content: space-around;
+    }
+    .tips{
+        gap: 1vw;
+        grid-template-columns: 7.67vw 7.67vw 7.67vw;
+    }
+    .button-reset{
+        height: 5vh;
+        width: 35vh;
+        margin-bottom: 20px;
+    }
+}
+
 @media only screen and (max-width: 700px){
     *{
         margin: 0;
         padding: 0;
     }
     .tip-calc{
+        height: auto;
         width: 100vw;
         align-items: center;
         flex-direction: column;
@@ -258,5 +307,4 @@ a:visited{
         height: 7vh;
     }
 }
-
 
