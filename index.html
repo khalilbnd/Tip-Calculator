@@ -13,15 +13,15 @@
   
 </head>
 <body>
-
+  
   <div class="container">
     <div class="title">SPLI<br />TTER</div>
     <div class="tip-calc">
       <form action="#" class="form-splitter">
         <div class="bill">
-        <label class="tit">Bill</label>
+        <label class="tit" for="bill">Bill</label>
         <br/>
-        <img src="images/icon-dollar.svg" class="dollar-sign">
+        <img src="images/icon-dollar.svg" class="dollar-sign" alt="Dollar" id="bill">
         <input type="text" class="money" onkeypress="return onlyNumberKey(event)">
         <br/>
       </div>
@@ -48,10 +48,11 @@
 
       </div>
       <div class="number-persons">
-          <label class="tit">Number of persons &nbsp;&nbsp;  <span class="error">can't be zero</span></label>
+          <label class="tit" for="person">Number of persons &nbsp;&nbsp;  <span class="error">can't be zero</span></label>
           <br />
-          <img src="images/icon-person.svg" class="dollar-sign">
-          <input type="text" class="money" onkeypress="return onlyNumberKey(event)">
+          <img src="images/icon-person.svg" class="dollar-sign" alt="Person">
+          
+          <input type="text" class="money" onkeypress="return onlyNumberKey(event)" id ="person">
       </div>
       </form>     
     
