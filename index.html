@@ -19,9 +19,10 @@
     <div class="tip-calc">
       <form action="#" class="form-splitter">
         <div class="bill">
-        <label class="tit" for="bill">Bill</label>
+        <label class="tit" >Bill</label>
         <br/>
         <img src="images/icon-dollar.svg" class="dollar-sign" alt="Dollar" id="bill">
+        <label for="bill"></label>
         <input type="text" class="money" onkeypress="return onlyNumberKey(event)">
         <br/>
       </div>
@@ -48,11 +49,12 @@
 
       </div>
       <div class="number-persons">
-          <label class="tit" for="person">Number of persons &nbsp;&nbsp;  <span class="error">can't be zero</span></label>
+          <label class="tit">Number of persons &nbsp;&nbsp;  <span class="error">can't be zero</span></label>
           <br />
           <img src="images/icon-person.svg" class="dollar-sign" alt="person">
           
           <input type="text" id="person" class="money" onkeypress="return onlyNumberKey(event)" >
+          <label  for="person"></label>
       </div>
       </form>     
     
