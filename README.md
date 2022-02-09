@@ -43,7 +43,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Links
 
 - Solution URL: [Click to get Solution](https://www.frontendmentor.io/solutions/tip-calculator-app-8J948LkeT)
-- Live Site URL: [Click to preview the website](https://tip-calculator-8zma45sra-khalil227.vercel.app/)
+- Live Site URL: [Click to preview the website](https://khalil227.github.io/Tip-Calculator/)
 
 ## My process
 
